@@ -3,18 +3,20 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './components/shared/Home';
 import About from './components/shared/About';
 import NoMatch from './components/shared/NoMatch';
+import NavBar from './components/shared/NavBar';
+import Venues from './components/venues/Venues';
+
+
 
 const App = () => (
   <Fragment>
-
+    <NavBar />
     <Switch>
-
       <Route exact path='/' component={Home} />
-      <Route exact path='/' component={About} />
+      <Route exact path='/about' component={About} />
+      <Route exact path='/venues' component={Venues} />
       <Route component={ NoMatch } />
-
     </Switch>
-
   </Fragment>
 )
 
