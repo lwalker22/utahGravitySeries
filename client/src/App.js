@@ -5,6 +5,9 @@ import About from './components/shared/About';
 import NoMatch from './components/shared/NoMatch';
 import NavBar from './components/shared/NavBar';
 import Venues from './components/venues/Venues';
+import VenueForm from './components/venues/VenueForm';
+import VenueShow from './components/venues/VenueShow';
+import VenueList from './components/venues/VenueList';
 
 
 
@@ -15,6 +18,9 @@ const App = () => (
       <Route exact path='/' component={Home} />
       <Route exact path='/about' component={About} />
       <Route exact path='/venues' component={Venues} />
+      <Route exact path='/venues/new' component={VenueForm} />
+      <Route exact path='/venues/:id' component={VenueShow} />
+      <Route exact path='/venues/:id' component={VenueList} />
       <Route component={ NoMatch } />
     </Switch>
   </Fragment>

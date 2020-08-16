@@ -1,5 +1,3 @@
-const { Component } = require("react");
-
 import React, { Component } from 'react';
 import axios from 'axios';
 
@@ -31,7 +29,7 @@ class VenueProvider extends Component {
       })
   }
 
-  updateVenue = (id, diner, history) => {
+  updateVenue = (id, venue, history) => {
     axios.put(`/api/venues/${id}`, { venue })
       .then( res => {
         const venues = this.state.venues.map( d => {
