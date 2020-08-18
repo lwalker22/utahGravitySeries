@@ -1,58 +1,45 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import logo from '../images/sprocket.jpg';
+import logo from '../logos/sprocket.jpg';
 // import { Image } from 'semantic-ui-react'
 
 const Navbar = () => (
   <NavContainer>
-    <ImageContainer>
+    <LeftLayout>
+    <div>
     <Link to ='/'>
       <img src={logo} alt='logo' style={{ width: "auto", height: "3em"}} />
     </Link>
-    </ImageContainer>
-    <LinkContainer>
-      <Link to ='/about'style={{ textDecoration: 'none' }}>
+    </div>
+    <div>
+      <Link to ='/about'style={{ textDecoration: 'none', margin: "1em", color: "white" }}>
         About
       </Link>
-    </LinkContainer>
-    <LinkContainer>
-    <Link to ='/venues' style={{ textDecoration: 'none' }}>
+    </div>
+    <div>
+    <Link to ='/venues' style={{ textDecoration: 'none', margin: ".5em", color: "white" }}>
       Venues
     </Link>
-    </LinkContainer>
+    </div>
+    </LeftLayout>
   </NavContainer>
 )
 
 const NavContainer = styled.div`
-  background: white;
-  border-radius: 2px;
-  border: 5px solid black;
-  color: black;
-  padding: .1em;
+  background: black;
+  border-radius: none;
+  border: 3px solid black;
+  color: white;
 `;
 
-const ImageContainer = styled.div`
-  display: inline-block;
-  boarder: solid;
-  margin-left: .5em;
-  margin-right: .5em;
-  margin-top: .5em;
-  margin-bottom: .5em;
+const LeftLayout = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
 `;
 
-const LinkContainer = styled.h2`
-  display: inline-block;
-  boarder: solid;
-  postion: absolute;
-  margin-left: .5em;
-  margin-right: .5em;
-  font-size: 20px;
-`;
 
 export default Navbar;
-
-
-{/* <ImageProp> */}
-{/* <img src={logo} alt='logo' style={{ width: "auto", height: "3em"}} /> */}
-{/* </ImageProp> */}

@@ -5,7 +5,7 @@ class VenueForm extends Component {
   state = { name: '', address: '', date: ''}
 
   componentDidMount () {
-    if (this.props.id) {
+    if (this.props.venue) {
       const { name, address, date } = this.props
       this.setState({ name, address, date })
     }

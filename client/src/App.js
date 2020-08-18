@@ -12,7 +12,7 @@ import styled, { css } from 'styled-components';
 
 
 const App = () => (
-  <>
+  <AppContainer>
     <NavBar />
     <Switch>
       <Route exact path='/' component={Home} />
@@ -22,8 +22,15 @@ const App = () => (
       <Route exact path='/venues/:id' component={VenueList} />
       <Route component={ NoMatch } />
     </Switch>
-  </>
+  </AppContainer>
 )
+
+const AppContainer = styled.div`
+  background: white;
+  border-radius: none;
+  border: 3px solid black;
+  color: black;
+`;
 
 export default App;
 
