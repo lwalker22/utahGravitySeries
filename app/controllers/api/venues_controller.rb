@@ -1,5 +1,4 @@
 class Api::VenuesController < ApplicationController
-end
 
 def index
   render json: Venue.all
@@ -30,6 +29,6 @@ end
 
 private
   def venue_params
-    params.require(:diner).permit(:name, :address, :hours)
+    params.require(:venue).permit(:name, :address, :hours)
   end
 end

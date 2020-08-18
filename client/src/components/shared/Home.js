@@ -1,9 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const Home = () => (
-  <div>
-    <h1>Home Page</h1>
-  </div>
+  <HomeHeader>
+    Utah Gravity Series
+  </HomeHeader>
 )
 
+const HomeHeader = styled.h1`
+  text-align: center;
+  color: navy;
+`;
 export default Home;

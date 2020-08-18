@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import image from '../images/sprocket.jpg'
 
 const NoMatch = () => (
   <>
-    <h1>404 page not found</h1>
+    <div>
+      <h1>404 page not found</h1>
+    </div>
+    <div>
+      <img src={image} />
+    </div>
     <Link to='home'>Return Home</Link>
   </>
 )
