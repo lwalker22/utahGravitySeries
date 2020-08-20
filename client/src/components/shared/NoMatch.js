@@ -7,7 +7,7 @@ const NoMatch = () => (
     <div>
       <h1>404 page not found</h1>
     </div>
-    <Link to='home'>Return Home</Link>
+    <Link to="/"> Return Home </Link>
   </>
 )
 

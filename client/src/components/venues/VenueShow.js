@@ -12,9 +12,9 @@ class VenueShow extends Component {
     const { updateVenue, deleteVenue, history } = this.props
     return (
       <Fragment>
-        <h1>Name</h1>
-        <h3>Address</h3>
-        <h3>Date</h3>
+        <h1>{name}</h1>
+        <h2>{address}</h2>
+        <h3>{date}</h3>
         { editing ?
             <VenueForm
               id={id}

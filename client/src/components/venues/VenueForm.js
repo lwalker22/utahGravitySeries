@@ -6,14 +6,14 @@ class VenueForm extends Component {
 
   componentDidMount () {
     if (this.props.venue) {
-      const { name, address, date } = this.props
+      const { name, address, date } = this.props.venue
       this.setState({ name, address, date })
     }
   }
 
   handleChange = (e) => {
     const { name, value } = e.target
-    this.setState({ [name]: [value] })
+    this.setState({ [name]: value })
   }
 
   handleSubmit = (e) => {
@@ -25,13 +25,13 @@ class VenueForm extends Component {
     } else {
       this.props.addVenue(this.state)
     }
-    this.setState({ name: '', address: '', date: ''})
+    this.setState({ name: '', address: '', date: '' })
   }
 
   render() {
     const { name, address, date } = this.state
     return(
-      <form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit}>
         <Form.Input
           name='name'
           value={name}
@@ -43,7 +43,7 @@ class VenueForm extends Component {
           name='address'
           value={address}
           onChange={this.handleChange}
-          label='Address'
+          label='Location'
           required
         />
         <Form.Input
@@ -54,7 +54,7 @@ class VenueForm extends Component {
           required
         />
         <Form.Button>Submit</Form.Button>
-      </form>
+      </Form>
     );
   }
 }

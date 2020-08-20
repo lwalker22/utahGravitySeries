@@ -29,6 +29,6 @@ end
 
 private
   def venue_params
-    params.require(:venue).permit(:name, :address, :hours)
+    params.require(:venue).permit(:name, :address, :date)
   end
 end
