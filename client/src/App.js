@@ -20,6 +20,7 @@ const App = () => (
       <Route exact path='/venues' component={Venues} />
       <Route exact path='/venues/:id' component={VenueShow} />
       <Route exact path='/venues/:id' component={VenueList} />
+      <Route exact path='/results/:id' component={VenueShow} />
       <Route component={ NoMatch } />
     </Switch>
   </AppContainer>
