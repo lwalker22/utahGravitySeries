@@ -38,7 +38,7 @@ class VenueShow extends Component {
   }
 }
 
-const ConnectVenueShow = (props) => (
+const ConnectedVenueShow = (props) => (
   <VenueConsumer>
     { value => (
       <VenueShow
@@ -50,4 +50,4 @@ const ConnectVenueShow = (props) => (
   </VenueConsumer>
 )
 
-export default ConnectVenueShow;
+export default ConnectedVenueShow;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import ResultForm from './ResultsForm';
+import ResultForm from './ResultForm';
 import { ResultConsumer } from '../../providers/ResultProvider';
+
 
 
 class ResultShow extends Component {
@@ -14,7 +15,7 @@ class ResultShow extends Component {
     const { editing } = this.state
     return(
       <>
-        <h1>{Year}</h1>
+        <h1>{year}</h1>
         { editing ?
             <ResultForm
               venueId={venue_id}

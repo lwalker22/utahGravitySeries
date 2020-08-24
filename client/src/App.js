@@ -8,10 +8,12 @@ import Venues from './components/venues/Venues';
 import VenueShow from './components/venues/VenueShow';
 import VenueList from './components/venues/VenueList';
 import styled, { css } from 'styled-components';
+import ResultShow from './components/results/ResultShow';
 
 
 
 const App = () => (
+  <>
   <AppContainer>
     <NavBar />
     <Switch>
@@ -19,11 +21,11 @@ const App = () => (
       <Route exact path='/about' component={About} />
       <Route exact path='/venues' component={Venues} />
       <Route exact path='/venues/:id' component={VenueShow} />
-      <Route exact path='/venues/:id' component={VenueList} />
-      <Route exact path='/results/:id' component={VenueShow} />
+      <Route exact path='/results/:id' component={ResultShow} />
       <Route component={ NoMatch } />
     </Switch>
   </AppContainer>
+  </>
 )
 
 const AppContainer = styled.div`

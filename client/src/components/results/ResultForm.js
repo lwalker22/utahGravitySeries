@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Form } from 'semantic-ui-react';
 
-class ResultsForm extends Component {
+class ResultForm extends Component {
   state = { year: '' }
 
   componentDidMount() {
     if (this.props.id) {
-      const { year } = this.props
+      const { year } = this.props.result
       this.setState({ year })
     }
   }
@@ -34,7 +34,7 @@ class ResultsForm extends Component {
         <Form.Input
           name='year'
           value={year}
-          onChange={this.handleSubmit}
+          onChange={this.handleChange}
           required
           label='Year'
         />

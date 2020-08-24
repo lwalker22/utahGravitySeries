@@ -13,7 +13,9 @@ class ResultProvider extends Component {
       .then( res => {
         this.setState({ results: res.data })
       })
-      .catch( err => console.log(err) )
+      .catch( err => {
+        console.log(err) 
+        })
   }
 
   addResult = (venue_id, result) => {

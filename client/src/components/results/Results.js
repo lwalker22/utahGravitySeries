@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ResultConsumer from '../../providers/ResultProvider';
-import ResultForm from '../results/ResultsForm';
-import ResultList from '../results/ResultList';
+import ResultForm from './ResultForm';
+import ResultList from './ResultList';
+import { VenueConsumer } from '../../providers/VenueProvider'
 
 class Results extends Component {
   componentDidMount () {
@@ -10,11 +11,11 @@ class Results extends Component {
   }
 
   render() {
-    const { addResults, venueID, results, deleteResults, history }
+    const { addResult, venueId, results, deleteResult, history } = this.props
     return(
       <>
         <h1>Results:</h1>
-        <ResultForm addResult={addResult} resultId={resultId} />
+        <ResultForm addResult={addResult} resultId={venueId} />
         <ResultList
           results={results}
           deleteResult={deleteResult}
@@ -32,3 +33,5 @@ const ConnectedResults = (props) => (
     }
   </ResultConsumer>
 )
+
+export default ConnectedResults;
