@@ -14,7 +14,7 @@ import ResultShow from './components/results/ResultShow';
 
 const App = () => (
   <>
-  <AppContainer>
+  {/* <AppContainer> */}
     <NavBar />
     <Switch>
       <Route exact path='/' component={Home} />
@@ -24,7 +24,7 @@ const App = () => (
       <Route exact path='/results/:id' component={ResultShow} />
       <Route component={ NoMatch } />
     </Switch>
-  </AppContainer>
+  {/* </AppContainer> */}
   </>
 )
 
