@@ -6,9 +6,10 @@ import NoMatch from './components/shared/NoMatch';
 import NavBar from './components/shared/NavBar';
 import Venues from './components/venues/Venues';
 import VenueShow from './components/venues/VenueShow';
-import VenueList from './components/venues/VenueList';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import ResultShow from './components/results/ResultShow';
+import Login from './components/shared/Login';
+import Register from './components/shared/Register';
 
 
 
@@ -20,6 +21,8 @@ const App = () => (
       <Route exact path='/' component={Home} />
       <Route exact path='/about' component={About} />
       <Route exact path='/venues' component={Venues} />
+      <Route exact path='/login' component={Login} />
+      <Route exact path='/register' component={Register} />
       <Route exact path='/venues/:id' component={VenueShow} />
       <Route exact path='/results/:id' component={ResultShow} />
       <Route component={ NoMatch } />

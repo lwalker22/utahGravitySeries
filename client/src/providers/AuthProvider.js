@@ -46,9 +46,9 @@ export class AuthProvider extends Component {
       <AuthContext.Provider value={{
         ...this.state,
         authenticated: this.state.user !==null,
-        handleRegister = this.handleRegister,
-        handleLogin = this.handleLogin,
-        handleLogout = this.handleLogout,
+        handleRegister: this.handleRegister,
+        handleLogin: this.handleLogin,
+        handleLogout: this.handleLogout,
         setUser: (user) => this.setState({ user}),
       }}>
         { this.props.children}
@@ -56,3 +56,5 @@ export class AuthProvider extends Component {
     )
   }
 };
+
+export default AuthProvider;
