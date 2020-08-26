@@ -13,12 +13,12 @@ const Navbar = () => (
     </Link>
     </div>
     <div>
-      <Link to ='/about'style={{ textDecoration: 'none', margin: "1em", color: "white" }}>
+      <Link to ='/about'style={{ textDecoration: 'none', margin: "1em", color: "white", fontFamily: "marker felt" }}>
         About
       </Link>
     </div>
     <div>
-    <Link to ='/venues' style={{ textDecoration: 'none', margin: ".5em", color: "white" }}>
+    <Link to ='/venues' style={{ textDecoration: 'none', margin: ".5em", color: "white", fontFamily: "marker felt" }}>
       Venues
     </Link>
     </div>

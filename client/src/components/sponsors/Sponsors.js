@@ -49,7 +49,6 @@ const Sponsors = () => (
 )
 
 const Layout = styled.div`
-  padding: 2em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

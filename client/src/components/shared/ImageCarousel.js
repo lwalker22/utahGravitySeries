@@ -13,7 +13,7 @@ import styled from 'styled-components'
 class ImageCarousel extends Component {
   render() {
     return (
-      <ImageStyle>
+      <ImageContainer>
         <Carousel autoPlay infiniteLoop showStatus={false} showThumbs={false} transitionTime={1000} interval={6000}>
             {/* <div>
                 <img src={image1} />
@@ -31,15 +31,14 @@ class ImageCarousel extends Component {
               <img src={image5} />
             </div>
         </Carousel>
-      </ImageStyle>
+      </ImageContainer>
     )
   }
 }
 
 export default ImageCarousel;
 
-const ImageStyle = styled.div`
-  boarder-radius: 50%;
-  padding-left: 1em;
-  padding-right: 1em;
+const ImageContainer = styled.div`
+  padding-left: 2em;
+  padding-right: 2em;
 `;

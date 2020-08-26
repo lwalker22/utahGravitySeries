@@ -5,19 +5,28 @@ import ImageCarousel from './ImageCarousel';
 
 const Home = () => (
   <>
-    <HomeHeader>
+    <Header>
       Utah Gravity Series
-    </HomeHeader>
+    </Header>
     <div>
       <ImageCarousel />
     </div>
+    <Body>
+      <h3>Series Sponsors</h3>
+    </Body>
     <div>
       <Sponsors />
     </div>
   </>
 )
 
-const HomeHeader = styled.h1`
+const Header = styled.h1`
+  text-align: center;
+  color: black;
+  font-family: marker felt;
+`;
+
+const Body = styled.h3`
   text-align: center;
   color: black;
   font-family: marker felt;
