@@ -3,24 +3,27 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './components/shared/Home';
 import About from './components/shared/About';
 import NoMatch from './components/shared/NoMatch';
-import NavBar from './components/shared/NavBar';
+import Navbar from './components/shared/Navbar';
 import Venues from './components/venues/Venues';
 import VenueShow from './components/venues/VenueShow';
 import styled from 'styled-components';
 import ResultShow from './components/results/ResultShow';
-import Login from './components/shared/Login';
-import Register from './components/shared/Register';
+import Login from './components/auth/Login';
+import Register from './components/auth/Register';
+import Profile from './components/auth/Profile';
+import ProtectedRoute from './components/auth/ProtectedRoute';
 
 
 
 const App = () => (
   <>
   {/* <AppContainer> */}
-    <NavBar />
+    <Navbar />
     <Switch>
       <Route exact path='/' component={Home} />
       <Route exact path='/about' component={About} />
       <Route exact path='/venues' component={Venues} />
+      <ProtectedRoute exact path='/profile' component={Profile} />
       <Route exact path='/login' component={Login} />
       <Route exact path='/register' component={Register} />
       <Route exact path='/venues/:id' component={VenueShow} />
