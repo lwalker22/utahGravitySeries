@@ -12,7 +12,7 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Profile from './components/auth/Profile';
 import ProtectedRoute from './components/auth/ProtectedRoute';
-
+import Footer from './components/shared/Footer';
 
 
 const App = () => (
@@ -30,6 +30,7 @@ const App = () => (
       <Route exact path='/results/:id' component={ResultShow} />
       <Route component={ NoMatch } />
     </Switch>
+    <Footer />
   {/* </AppContainer> */}
   </>
 )

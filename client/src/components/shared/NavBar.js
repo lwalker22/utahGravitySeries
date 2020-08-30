@@ -28,11 +28,12 @@ class Navbar extends React.Component {
     } else {
       return (
         <>
-          <LinkStyle to="/register" >
-            Register
-          </LinkStyle>
           <LinkStyle to="/login" >
             Login
+            <br></br>
+          </LinkStyle>
+          <LinkStyle to="/register" >
+            Register
           </LinkStyle>
         </>
       );
@@ -52,8 +53,10 @@ class Navbar extends React.Component {
           <LinkStyle to ='/venues' >
             Venues
           </LinkStyle>
-          {this.rightNavItems()}
         </LeftLayout>
+        <RightLayout>
+          {this.rightNavItems()}
+        </RightLayout>
       </NavContainer>
     );
   }
@@ -74,15 +77,46 @@ export default withRouter(ConnectedNavbar);
 const NavContainer = styled.div`
   background: black;
   border-radius: none;
-  border: 3px solid black;
+  border: 0px solid black;
 `;
 
+// const LeftLayout = styled.div`
+//   padding: .5em;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   display: inline-block;
+// `;
+
+// const LeftLayout = styled.div`
+//   display: inline-block;
+//   background: black;
+//   float: left;
+//   display: flex;
+//   aligin-items: center;
+// `;
+
 const LeftLayout = styled.div`
-  padding: .5em;
+  display: inline-block;
   display: flex;
+  justify-content: flex-start
   flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
+`;
+
+
+// const RightLayout = styled.div`
+//   display: inline-block;
+//   float: right;
+//   background: black;
+// `;
+
+const RightLayout = styled.div`
+  display: inline-block;
+  background: grey;
+  float: right;
+  postion: relative;
+  top: -300px;
 `;
 
 const LinkStyle = styled(Link)`
