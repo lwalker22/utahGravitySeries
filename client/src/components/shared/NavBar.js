@@ -18,11 +18,11 @@ class Navbar extends React.Component {
         <>
           <LinkStyle to="/profile" >
             Profile
+            <br></br>
           </LinkStyle>
-          <Menu.Item
-            name="logout"
-            onClick={ () => handleLogout(this.props.history) }
-            />
+          <LinkStyle to="/" >
+              Logout
+          </LinkStyle>
         </>
       );
     } else {
@@ -74,49 +74,24 @@ export class ConnectedNavbar extends React.Component {
 
 export default withRouter(ConnectedNavbar);
 
-const NavContainer = styled.div`
+const NavContainer = styled.body`
   background: black;
-  border-radius: none;
-  border: 0px solid black;
+  boader: 2px solid black;
+  overflow: hidden;
 `;
-
-// const LeftLayout = styled.div`
-//   padding: .5em;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: flex-start;
-//   display: inline-block;
-// `;
-
-// const LeftLayout = styled.div`
-//   display: inline-block;
-//   background: black;
-//   float: left;
-//   display: flex;
-//   aligin-items: center;
-// `;
 
 const LeftLayout = styled.div`
   display: inline-block;
+  padding: 1em;
+  float: left;
   display: flex;
-  justify-content: flex-start
-  flex-direction: row;
   align-items: center;
 `;
 
-
-// const RightLayout = styled.div`
-//   display: inline-block;
-//   float: right;
-//   background: black;
-// `;
-
 const RightLayout = styled.div`
   display: inline-block;
-  background: grey;
+  padding: 1em;
   float: right;
-  postion: relative;
-  top: -300px;
 `;
 
 const LinkStyle = styled(Link)`
@@ -125,44 +100,3 @@ const LinkStyle = styled(Link)`
   color: white;
   font-family: marker felt;
 `;
-
-
-// const Navbar = () => (
-//   <NavContainer>
-//     <LeftLayout>
-//     <div>
-//     <Link to ='/'>
-//       <img src={logo} alt='logo' style={{ width: "auto", height: "3em"}} />
-//     </Link>
-//     </div>
-//     <div>
-//       <Link to ='/about' style={{ textDecoration: 'none', margin: "1em", color: "white", fontFamily: "marker felt" }}>
-//         About
-//       </Link>
-//     </div>
-//     <div>
-//     <Link to ='/venues' style={{ textDecoration: 'none', margin: ".5em", color: "white", fontFamily: "marker felt" }}>
-//       Venues
-//     </Link>
-//     </div>
-//     </LeftLayout>
-//   </NavContainer>
-// )
-
-// const NavContainer = styled.div`
-//   background: black;
-//   border-radius: none;
-//   border: 3px solid black;
-//   color: white;
-// `;
-
-// const LeftLayout = styled.div`
-//   display: flex;
-//   flex-direction: row;
-//   flex-wrap: wrap;
-//   justify-content: flex-start;
-//   align-items: center;
-// `;
-
-
-// export default Navbar;

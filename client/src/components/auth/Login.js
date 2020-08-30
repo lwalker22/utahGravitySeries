@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AuthConsumer } from "../../providers/AuthProvider";
 import { Button, Form, Segment, Header } from 'semantic-ui-react';
+import styled from 'styled-components';
 
 class Login extends Component {
   state = { email: '', password: '' }
@@ -20,8 +21,8 @@ class Login extends Component {
     const { email, password } = this.state;
 
     return (
-      <Segment basic>
-        <Header as='h1' textAlign='center'>Login</Header>
+      <LoginContainer>
+        <h1 Login style={{color: 'red'}} />
         <Form onSubmit={this.handleSubmit}>
           <Form.Input
             label="Email"
@@ -45,7 +46,7 @@ class Login extends Component {
             <Button primary type='submit'>Submit</Button>
           </Segment>
         </Form>
-      </Segment>
+      </LoginContainer>
     )
   }
 }
@@ -59,3 +60,10 @@ export default class ConnectedLogin extends React.Component {
     )
   }
 }
+
+const LoginContainer = styled.div`
+  background: black;
+  padding: 0;
+  border: 5px solid yellow;
+  margin: 3em;
+`;

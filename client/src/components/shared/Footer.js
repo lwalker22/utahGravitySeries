@@ -7,28 +7,48 @@ import { Link, withRouter } from "react-router-dom";
 
 
 const Footer = () => (
-  <Container>
+    <FootContainer>
       <a href="mailto:info@utahdh.org" target="blank">
-      <img src={email_logo} alt="email_logo" 
-        style={{ width: "auto", height: "1.75em" }} />
+        <LeftImage src={email_logo} alt="email_logo"/>
       </a>
       <a href="https://www.facebook.com/utahgravityseries/" target="blank">
-        <img src={fb_logo} alt="fb_logo" style={{ width: "auto", height: "2em" }} />
+        <RightFirstImage src={fb_logo} alt="fb_logo" />
       </a>
       <a href="https://www.instagram.com/utahgravityseries/" target="blank">
-        <img src={insta_logo} alt="insta_logo" style={{ width: "auto", height: "2.5em" }} />
+        <RightSecondImage src={insta_logo} alt="insta_logo" />
       </a>
-  </Container>
+    </FootContainer>
 )
 
 export default Footer;
 
 
-const Container = styled.div`
-  background: black;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+const FootContainer = styled.div`
+  background-color: black;
+  overflow: hidden;
+
+`;
+
+const LeftImage = styled.img`
+  width: auto;
+  height: 1em;
   padding: 1em;
+  float: left;
+  margin: 0em;
+`;
+
+const RightFirstImage = styled.img`
+  width: auto;
+  height: 1.1em;
+  padding: 0em;
+  margin: 1em;
+  float: right;
+`;
+
+const RightSecondImage = styled.img`
+  width: auto;
+  height: 1.75em;
+  padding: .75em;
+  margin: 0em;
+  float: right;
 `;
