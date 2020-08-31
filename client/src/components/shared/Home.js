@@ -8,9 +8,9 @@ const Home = () => (
     <Header>
       Utah Gravity Series
     </Header>
-    <div>
+    <ImageBoarder>
       <ImageCarousel />
-    </div>
+    </ImageBoarder>
     <Body>
       <h3>Series Sponsors</h3>
     </Body>
@@ -30,6 +30,11 @@ const Body = styled.h3`
   text-align: center;
   color: black;
   font-family: marker felt;
+`;
+
+const ImageBoarder = styled.div`
+  background: black;
+
 `;
 
 

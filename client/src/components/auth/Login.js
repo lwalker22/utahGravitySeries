@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { AuthConsumer } from "../../providers/AuthProvider";
-import { Button, Form, Segment, Header } from 'semantic-ui-react';
-import styled from 'styled-components';
+import { Segment } from 'semantic-ui-react';
+import { FormContainer, FormHeader, FormStyle} from '../styledComponents/FormStyles';
 
 class Login extends Component {
   state = { email: '', password: '' }
@@ -21,10 +21,10 @@ class Login extends Component {
     const { email, password } = this.state;
 
     return (
-      <LoginContainer>
-        <h1 Login style={{color: 'red'}} />
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Input
+      <FormContainer>
+        <FormHeader> Login </FormHeader>
+        <FormStyle onSubmit={this.handleSubmit}>
+          <input
             label="Email"
             autoFocus
             required         
@@ -32,8 +32,10 @@ class Login extends Component {
             value={email}
             placeholder='Email'
             onChange={this.handleChange}
-          />
-          <Form.Input
+            />
+          <br></br>
+          <br></br>
+          <input
             label="Password"
             required
             name='password'
@@ -41,12 +43,14 @@ class Login extends Component {
             placeholder='Password'
             type='password'
             onChange={this.handleChange}
-          />
+            />
           <Segment textAlign='center' basic>
-            <Button primary type='submit'>Submit</Button>
+            <br></br>
+            <button>Submit</button>
           </Segment>
-        </Form>
-      </LoginContainer>
+        </FormStyle>
+      </FormContainer>
+
     )
   }
 }
@@ -60,10 +64,3 @@ export default class ConnectedLogin extends React.Component {
     )
   }
 }
-
-const LoginContainer = styled.div`
-  background: black;
-  padding: 0;
-  border: 5px solid yellow;
-  margin: 3em;
-`;

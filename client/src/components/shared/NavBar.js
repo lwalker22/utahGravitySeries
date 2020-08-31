@@ -21,7 +21,7 @@ class Navbar extends React.Component {
             <br></br>
           </LinkStyle>
           <LinkStyle to="/" >
-              Logout
+            Logout
           </LinkStyle>
         </>
       );

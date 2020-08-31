@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { AuthConsumer, } from '../../providers/AuthProvider';
-import { Button, Form, Segment, Header, } from 'semantic-ui-react';
+import { Segment } from 'semantic-ui-react';
+import { FormContainer, FormHeader, FormStyle } from '../styledComponents/FormStyles';
 
 class Register extends Component {
   state = { email: '', password: '', passwordConfirmation: '', };
@@ -25,10 +26,10 @@ class Register extends Component {
     const { email, password, passwordConfirmation, } = this.state;
     
     return (
-      <Segment basic>
-        <Header as='h1' textAlign='center'>Register</Header>
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Input
+      <FormContainer>
+        <FormHeader> Register </FormHeader>
+        <FormStyle onSubmit={this.handleSubmit}>
+          <input
             label="Email"
             required
             autoFocus
@@ -37,7 +38,9 @@ class Register extends Component {
             placeholder='Email'
             onChange={this.handleChange}
           />
-          <Form.Input
+          <br></br>
+          <br></br>
+          <input
             label="Password"
             required
             name='password'
@@ -46,7 +49,9 @@ class Register extends Component {
             type='password'
             onChange={this.handleChange}
           />
-          <Form.Input
+          <br></br>
+          <br></br>
+          <input
             label="Password Confirmation"
             required
             name='passwordConfirmation'
@@ -55,11 +60,13 @@ class Register extends Component {
             type='password'
             onChange={this.handleChange}
           />
+          <br></br>
+          <br></br>
           <Segment textAlign='center' basic>
-            <Button primary type='submit'>Submit</Button>
+            <button> Submit </button>
           </Segment>
-        </Form>
-      </Segment>
+        </FormStyle>
+      </FormContainer>
     )
   }
 }
