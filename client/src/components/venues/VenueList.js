@@ -1,23 +1,25 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import { VenueContainer, VenueHeader, VenueLink } from '../styledComponents/VenueStyles';
+
 
 const VenueList = ({ venues }) => (
-  <Fragment>
-    <h1>Venues:</h1>
+  <VenueContainer>
+    <VenueHeader>Venues</VenueHeader>
     {
       venues.map( v => 
         <Fragment>
-          <Link to={{
+          <VenueLink to={{
             pathname: `/venues/${v.id}`,
             state: {...v}
           }}>
             { v.name }
-          </Link>
+          </VenueLink>
           <br />
         </Fragment>
       )
     }
-  </Fragment>
+  </VenueContainer>
 )
 
 export default VenueList;

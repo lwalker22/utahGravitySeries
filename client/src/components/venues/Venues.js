@@ -9,7 +9,6 @@ const Venues = () => (
     {
       value => (
         <Fragment>
-          <h1>Venues</h1>
           <VenueForm addVenue={value.addVenue} />
           <VenueList venues={value.venues} />
         </Fragment>

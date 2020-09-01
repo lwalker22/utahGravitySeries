@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Form } from 'semantic-ui-react';
+import { FormContainer, FormHeader, FormStyle, FormInput, FormButton} from '../styledComponents/FormStyles';
 
 class VenueForm extends Component {
   state = { name: '', address: '', date: ''}
@@ -31,30 +31,34 @@ class VenueForm extends Component {
   render() {
     const { name, address, date } = this.state
     return(
-      <Form onSubmit={this.handleSubmit}>
-        <Form.Input
-          name='name'
-          value={name}
-          onChange={this.handleChange}
-          label='Venue Name'
-          required
-        />
-        <Form.Input
-          name='address'
-          value={address}
-          onChange={this.handleChange}
-          label='Location'
-          required
-        />
-        <Form.Input
-          name='date'
-          value={date}
-          onChange={this.handleChange}
-          label='Date'
-          required
-        />
-        <Form.Button>Submit</Form.Button>
-      </Form>
+      <FormContainer>
+        <FormHeader> Add a Venue </FormHeader>
+          <FormStyle onSubmit={this.handleSubmit}>
+            <FormInput
+              placeholder="Name"
+              name='name'
+              value={name}
+              onChange={this.handleChange}
+              required
+              />
+            <FormInput
+              placeholder="Location"
+              name='address'
+              value={address}
+              onChange={this.handleChange}
+              required
+              />
+            <FormInput
+              placeholder="Date"
+              name='date'
+              value={date}
+              onChange={this.handleChange}
+              required
+              />
+              <br></br>
+            <FormButton>Submit</FormButton>
+          </FormStyle>
+        </FormContainer>
     );
   }
 }

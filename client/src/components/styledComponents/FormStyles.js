@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 
 export const FormContainer = styled.div`
@@ -18,4 +18,20 @@ export const FormStyle = styled.form`
   margin: .5em;
   text-align: center;
   vertical-align: middle;
+`;
+
+export const FormInput = styled.input`
+  text-align: center;
+  font-size: 1em;
+  padding: .5em;
+  margin: .25em;
+`;
+
+export const FormButton = styled.button`
+  padding: .25em;
+  margin: .5em;
+  background: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2px;
 `;
