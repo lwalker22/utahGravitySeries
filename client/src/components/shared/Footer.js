@@ -26,7 +26,6 @@ export default Footer;
 const FootContainer = styled.div`
   background-color: black;
   overflow: hidden;
-
 `;
 
 const LeftImage = styled.img`

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const FormContainer = styled.div`
   background: black;
-  padding: 0;
   border: 5px solid white;
 `;
 
@@ -25,6 +24,7 @@ export const FormInput = styled.input`
   font-size: 1em;
   padding: .5em;
   margin: .25em;
+  border-radius: 10px;
 `;
 
 export const FormButton = styled.button`
@@ -33,5 +33,6 @@ export const FormButton = styled.button`
   background: black;
   color: white;
   border: 1px solid white;
-  border-radius: 2px;
+  border-radius: 10px;
+  font-size: 1em;
 `;
