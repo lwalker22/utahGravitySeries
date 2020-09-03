@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { AuthConsumer, } from '../../providers/AuthProvider';
 import { Segment } from 'semantic-ui-react';
-import { FormContainer, FormHeader, FormStyle, FormInput, FormButton } from '../styledComponents/FormStyles';
+import { FormContainer, FormHeader1, FormStyle, FormInput } from '../styledComponents/FormStyles';
+import { SubmitButton } from '../styledComponents/CommonStyles';
+
 
 class Register extends Component {
   state = { email: '', password: '', passwordConfirmation: '', };
@@ -27,7 +29,7 @@ class Register extends Component {
     
     return (
       <FormContainer>
-        <FormHeader> Register </FormHeader>
+        <FormHeader1> Register </FormHeader1>
         <FormStyle onSubmit={this.handleSubmit}>
           <FormInput
             label="Email"
@@ -62,7 +64,7 @@ class Register extends Component {
           />
           <br></br>
           <br></br>
-          <FormButton> Submit </FormButton>
+          <SubmitButton> Submit </SubmitButton>
         </FormStyle>
       </FormContainer>
     )

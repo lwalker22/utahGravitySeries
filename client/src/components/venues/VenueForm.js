@@ -1,12 +1,14 @@
 import React, { Component, Fragment } from 'react';
-import { FormContainer, FormHeader, FormStyle, FormInput, FormButton} from '../styledComponents/FormStyles';
+import { FormContainer, FormHeader1, FormStyle, FormInput } from '../styledComponents/FormStyles';
+import { SubmitButton } from '../styledComponents/CommonStyles';
+
 
 class VenueForm extends Component {
   state = { name: '', address: '', date: ''}
 
   componentDidMount () {
-    if (this.props.venue) {
-      const { name, address, date } = this.props.venue
+    if (this.props.id) {
+      const { name, address, date } = this.props
       this.setState({ name, address, date })
     }
   }
@@ -32,7 +34,7 @@ class VenueForm extends Component {
     const { name, address, date } = this.state
     return(
       <FormContainer>
-        <FormHeader> Add a Venue </FormHeader>
+        <FormHeader1> Venue </FormHeader1>
           <FormStyle onSubmit={this.handleSubmit}>
             <FormInput
               placeholder="Name"
@@ -49,14 +51,14 @@ class VenueForm extends Component {
               required
               />
             <FormInput
-              placeholder="Date"
               name='date'
               value={date}
               onChange={this.handleChange}
               required
+              placeholder='Date'
               />
               <br></br>
-            <FormButton>Submit</FormButton>
+            <SubmitButton>Submit</SubmitButton>
           </FormStyle>
         </FormContainer>
     );

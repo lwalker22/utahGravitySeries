@@ -96,7 +96,7 @@ const RightLayout = styled.div`
 
 const LinkStyle = styled(Link)`
   text-decoration: none;
-  margin: .5em;
+  margin: 1em;
   color: white;
   font-family: marker felt;
 `;

@@ -14,7 +14,7 @@ const Sponsors = () => (
     <Layout>
       <div>
         <a href="https://www.go-ride.com/" target="blank">
-          <img src={logo3} alt="goride_logo" style={{ width: "auto", height: "4em"}} />
+          <img src={logo3} alt="goride_logo" style={{ width: "auto", height: "3.5em"}} />
         </a>
       </div>
       <div>
@@ -24,7 +24,7 @@ const Sponsors = () => (
       </div>
       <div>
         <a href="http://www.bohemianbrewery.com/" target="blank">
-          <img src={logo1} alt="bohemian_logo" style={{ width: "auto", height: "4.5em"}} />
+          <img src={logo1} alt="bohemian_logo" style={{ width: "auto", height: "4em"}} />
         </a>
       </div>
       <div>

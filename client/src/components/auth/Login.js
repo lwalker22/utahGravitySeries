@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { AuthConsumer } from "../../providers/AuthProvider";
 import { Segment } from 'semantic-ui-react';
-import { FormContainer, FormHeader, FormStyle, FormInput, FormButton} from '../styledComponents/FormStyles';
+import { FormContainer, FormHeader1, FormStyle, FormInput } from '../styledComponents/FormStyles';
+import { SubmitButton } from '../styledComponents/CommonStyles';
 
 class Login extends Component {
   state = { email: '', password: '' }
@@ -22,7 +23,7 @@ class Login extends Component {
 
     return (
       <FormContainer>
-        <FormHeader> Login </FormHeader>
+        <FormHeader1> Login </FormHeader1>
         <FormStyle onSubmit={this.handleSubmit}>
           <FormInput
             label="Email"
@@ -46,7 +47,7 @@ class Login extends Component {
             />
             <br></br>
             <br></br>
-            <FormButton>Submit</FormButton>
+            <SubmitButton>Submit</SubmitButton>
         </FormStyle>
       </FormContainer>
 

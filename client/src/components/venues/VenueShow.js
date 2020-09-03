@@ -1,6 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import {VenueConsumer} from '../../providers/VenueProvider';
 import VenueForm from './VenueForm'
+import { FormContainer, FormHeader1, FormHeader2, FormHeader3} from '../styledComponents/FormStyles';
+import { SubmitButton, EditButton, DeleteButton, ButtonDiv1, ButtonDiv2 } from '../styledComponents/CommonStyles';
+
+
 
 class VenueShow extends Component {
   state = {editing: false}
@@ -11,10 +15,10 @@ class VenueShow extends Component {
     const { editing } = this.state
     const { updateVenue, deleteVenue, history } = this.props
     return (
-      <Fragment>
-        <h1>{name}</h1>
-        <h2>{address}</h2>
-        <h3>{date}</h3>
+      <FormContainer>
+        <FormHeader1>{name}</FormHeader1>
+        <FormHeader2>{address}</FormHeader2>
+        <FormHeader3>{date}</FormHeader3>
         { editing ?
             <VenueForm
               id={id}
@@ -26,14 +30,18 @@ class VenueShow extends Component {
               history={history}
             />
           :
-          <button onClick={this.toggleUpdate}>
-            Edit
-          </button>
-        }
-        <button onClick={() => deleteVenue(id, history)}>
-          Delete
-        </button>
-      </Fragment>
+          <ButtonDiv1>
+            <EditButton onClick={this.toggleUpdate}>
+              Edit
+            </EditButton>
+          </ButtonDiv1>
+          }
+          <ButtonDiv2>
+            <DeleteButton onClick={() => deleteVenue(id, history)}>
+              Delete
+            </DeleteButton>
+          </ButtonDiv2>
+      </FormContainer>
     )
   }
 }

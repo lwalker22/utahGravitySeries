@@ -32,11 +32,11 @@ class VenueProvider extends Component {
   updateVenue = (id, venue, history) => {
     axios.put(`/api/venues/${id}`, { venue })
       .then( res => {
-        const venues = this.state.venues.map( d => {
-          if (d.id === id) {
+        const venues = this.state.venues.map( v => {
+          if (v.id === id) {
             return res.data
           }
-          return d
+          return v
         })
         this.setState({ venues })
         history.push('/venues')
