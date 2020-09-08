@@ -13,18 +13,19 @@ class Navbar extends React.Component {
       location,
     } = this.props;
 
-    if (user) {
-      return (
-        <>
-          <LinkStyle to="/profile" >
-            Profile
-            <br></br>
-          </LinkStyle>
-          <LinkStyle to="/" >
-            Logout
-          </LinkStyle>
-        </>
-      );
+
+  if (user) {
+    return (
+      <>
+        <LinkStyle to="/profile" >
+          Profile
+          <br></br>
+        </LinkStyle>
+        <div
+          onClick={() => handleLogout(this.props.history)} > Logout
+        </div>
+      </>
+    );
     } else {
       return (
         <>
@@ -45,7 +46,7 @@ class Navbar extends React.Component {
       <NavContainer>
         <LeftLayout>
           <Link to ='/'>
-            <img src={logo} alt='logo' style={{ width: "auto", height: "3em"}} />
+            <img src={logo} alt='logo' style={{ width: "auto", height: "2.5em"}} />
           </Link>
           <LinkStyle to ='/about' >
             About
@@ -100,3 +101,23 @@ const LinkStyle = styled(Link)`
   color: white;
   font-family: marker felt;
 `;
+
+const Div = styled.div`
+  text-decoration: none;
+  margin: 1em;
+  color: white;
+  font-family: marker felt;
+  `;
+
+// if (user) {
+//   return (
+//     <>
+//       <LinkStyle to="/profile" >
+//         Profile
+//         <br></br>
+//       </LinkStyle>
+//       <div
+//         onClick={() => handleLogout(this.props.history)} >
+//       </div>
+//     </>
+//   );

@@ -6,7 +6,7 @@ class ResultForm extends Component {
 
   componentDidMount() {
     if (this.props.id) {
-      const { year } = this.props.result
+      const { year } = this.props
       this.setState({ year })
     }
   }
@@ -19,10 +19,10 @@ class ResultForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     if (this.props.id) {
-      const { updateResult, resultId, id, history } = this.props
-      updateResult(resultId, id, this.state, history)
+      const { updateResult, venueId, id, history } = this.props
+      updateResult(venueId, id, this.state, history)
     } else {
-      this.props.addResult(this.props.resultId, this.state)
+      this.props.addResult(this.props.venueId, this.state)
     }
     this.setState({ year: '' })
   }
