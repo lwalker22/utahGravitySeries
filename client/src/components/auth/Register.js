@@ -6,15 +6,15 @@ import { SubmitButton } from '../styledComponents/CommonStyles';
 
 
 class Register extends Component {
-  state = { email: '', password: '', passwordConfirmation: '', };
+  state = { email: '', password: '', passwordConfirmation: '', name: '' };
   
   handleSubmit = (e) => {
     e.preventDefault();
-    const { email, password, passwordConfirmation } = this.state;
+    const { email, password, passwordConfirmation, name } = this.state;
     const { auth: { handleRegister, }, history, } = this.props;
 
     if (password === passwordConfirmation)
-      handleRegister({ email, password, passwordConfirmation, }, history);
+      handleRegister({ email, password, passwordConfirmation, name }, history);
     else
       alert('Passwords Do Not Match!')
   }
@@ -25,12 +25,23 @@ class Register extends Component {
   }
   
   render() {
-    const { email, password, passwordConfirmation, } = this.state;
+    const { email, password, passwordConfirmation, name } = this.state;
     
     return (
       <FormContainer>
         <FormHeader1> Register </FormHeader1>
         <FormStyle onSubmit={this.handleSubmit}>
+        <FormInput
+            label="Name"
+            required
+            autoFocus
+            name='name'
+            value={name}
+            placeholder='Name'
+            onChange={this.handleChange}
+          />
+          <br></br>
+          <br></br>
           <FormInput
             label="Email"
             required

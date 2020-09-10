@@ -26,7 +26,7 @@ export default Footer;
 const FootContainer = styled.div`
   background-color: black;
   overflow: hidden;
-  position: sticky;
+  position: fixed;
   left: 0;
   bottom: 0;
   right: 0;

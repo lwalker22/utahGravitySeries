@@ -61,6 +61,7 @@ const Layout = styled.div`
 `;
 
 const SponsorContainer = styled.div`
+  padding: 1.25em;
   margin: 2em;
 `;
 
