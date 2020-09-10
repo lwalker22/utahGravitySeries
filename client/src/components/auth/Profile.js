@@ -56,7 +56,7 @@ class Profile extends Component {
     return (
       <FormContainer>
         <Grid.Column width={2}>
-          <ImageContainer src={user.image || defaultImage} />
+          <ImageContainer src={user.image || defaultImage}/>
         </Grid.Column>
         <Grid.Column width={8}>
           <FormHeader1 as="h1">{user.name}</FormHeader1>
@@ -90,7 +90,7 @@ class Profile extends Component {
                 {
                   isDragActive ?
                     <p>Drop files here...</p> :
-                    <p>Try dropping some files here, or click to select files to upload.</p>
+                    <p>Drop picture here or select file to upload.</p>
                 }
               </div>
             )
@@ -158,11 +158,17 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     padding: "10px",
-    color: "white"
+    color: "white",
+    display: "block",
+    margin: "0 auto",
+    marginTop: "1em"
   },
 }
 
 const ImageContainer = styled.img`
+  margin: 2em;
+  height: 6em;
+  width: auto;
   padding-left: 2em;
   padding-right: 2em;
 `;

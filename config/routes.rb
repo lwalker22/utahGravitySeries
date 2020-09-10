@@ -4,5 +4,10 @@ Rails.application.routes.draw do
     resources :venues do
       resources :results 
     end
-  end  
+  end
+  
+  namespace :api do
+    resources :users, only: :update
+  end
+  
 end
