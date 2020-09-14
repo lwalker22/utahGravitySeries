@@ -21,9 +21,9 @@ class Navbar extends React.Component {
           Profile
           <br></br>
         </LinkStyle>
-        <div
+        <Div
           onClick={() => handleLogout(this.props.history)} > Logout
-        </div>
+        </Div>
       </>
     );
     } else {
@@ -31,7 +31,6 @@ class Navbar extends React.Component {
         <>
           <LinkStyle to="/login" >
             Login
-            <br></br>
           </LinkStyle>
           <LinkStyle to="/register" >
             Register
@@ -46,7 +45,7 @@ class Navbar extends React.Component {
       <NavContainer>
         <LeftLayout>
           <Link to ='/'>
-            <img src={logo} alt='logo' style={{ width: "auto", height: "2.5em"}} />
+            <LogoImage src={logo} alt='home logo' />
           </Link>
           <LinkStyle to ='/about' >
             About
@@ -79,27 +78,37 @@ const NavContainer = styled.body`
   background: black;
   boader: 2px solid black;
   overflow: hidden;
+  padding: 1em;
 `;
 
 const LeftLayout = styled.div`
   display: inline-block;
-  padding: 1em;
   float: left;
   display: flex;
   align-items: center;
+  padding: .5em;
 `;
 
 const RightLayout = styled.div`
-  display: inline-block;
-  padding: 1em;
   float: right;
+  display: flex;
+  flex-direction: column;
 `;
 
 const LinkStyle = styled(Link)`
   text-decoration: none;
-  margin: 1em;
+  padding: .5em;
   color: white;
   font-family: marker felt;
+  @media screen and (min-width: 320px) {
+    font-size: .8em;
+  }
+  @media screen and (min-width: 360px) {
+    font-size: 1em;
+  }
+  @media screen and (min-width: 579px) {
+    font-size: 1.25em;
+  }
 `;
 
 const Div = styled.div`
@@ -107,7 +116,24 @@ const Div = styled.div`
   margin: 1em;
   color: white;
   font-family: marker felt;
-  `;
+`;
+
+const LogoImage = styled.img`
+  margin: .25em;
+  @media screen and (min-width: 320px) {
+    width: auto;
+    height: 2em;
+  }
+  @media screen and (min-width: 360px) {
+    width: auto;
+    height: 2.5em;
+  }
+  @media screen and (min-width: 579px) {
+    width: auto;
+    height: 4.5em;
+  }
+
+`;
 
 // if (user) {
 //   return (

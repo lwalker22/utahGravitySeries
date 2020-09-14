@@ -55,13 +55,10 @@ class Profile extends Component {
     const { auth: { user }, } = this.props;
     return (
       <FormContainer>
-        <Grid.Column width={2}>
           <ImageContainer src={user.image || defaultImage}/>
-        </Grid.Column>
-        <Grid.Column width={8}>
-          <FormHeader1 as="h1">{user.name}</FormHeader1>
-          <FormHeader1 as="h1">{user.email}</FormHeader1>
-        </Grid.Column>
+          <FormHeader1> 
+            Welcome, {user.name}!
+          </FormHeader1>
       </FormContainer>
     )
   }
@@ -75,7 +72,6 @@ class Profile extends Component {
     const { formValues: { name, email, file, } } = this.state;
     return (
       <FormContainer onSubmit={this.handleSubmit}>
-        <Grid.Column width={4}>
         <Dropzone
           onDrop={this.onDrop}
           multiple={false}
@@ -96,7 +92,6 @@ class Profile extends Component {
             )
           }}
         </Dropzone>
-        </Grid.Column>
         <FormStyle >
           <FormInput
             label="Name"
@@ -124,15 +119,10 @@ class Profile extends Component {
     const { editing, } = this.state;
     return (
       <FormContainer>
-        <Divider hidden />
-        <Grid>
-          <Grid.Row>
-            { editing ? this.editView() : this.profileView()}
-            <Grid.Column>
-              <EditButton onClick={this.toggleEdit}>{editing ? 'Cancel' : 'Edit'}</EditButton>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
+        { editing ? this.editView() : this.profileView()}
+        <EditButton 
+          onClick={this.toggleEdit}>{editing ? 'Cancel' : 'Edit'}
+        </EditButton>
       </FormContainer>
     )
   }

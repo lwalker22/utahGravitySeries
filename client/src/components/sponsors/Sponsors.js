@@ -14,40 +14,45 @@ const Sponsors = () => (
     <Layout>
       <div>
         <a href="https://www.go-ride.com/" target="blank">
-          <img src={logo3} alt="goride_logo" style={{ width: "auto", height: "3.5em"}} />
+          <GrImage src={logo3} alt="goride_logo" />
         </a>
       </div>
       <div>
         <a href="https://www.giro.com/" target="blank">
-          <img src={logo2} alt="giro_logo" style={{ width: "auto", height: "1.5em"}} />
+          <GiImage src={logo2} alt="giro_logo" />
         </a>
       </div>
       <div>
         <a href="http://www.bohemianbrewery.com/" target="blank">
-          <img src={logo1} alt="bohemian_logo" style={{ width: "auto", height: "4em"}} />
+          <BhImage src={logo1} alt="bohemian_logo" />
         </a>
       </div>
       <div>
         <a href="http://www.ebaystores.com/TruckerCo-High-Performance-Parts?_rdc=1" target="blank">
-          <img src={logo7} alt="truckerco_logo" style={{ width: "auto", height: "1em"}} />
+          <TcImage src={logo7} alt="truckerco_logo" />
         </a>
       </div>
       <div>
         <a href="https://trpcycling.com/" target="blank">
-          <img src={logo6} alt="trp_logo" style={{ width: "auto", height: "1.5em"}} />
+          <TrpImage src={logo6} alt="trp_logo" />
         </a>
       </div>
       <div>
         <a href="https://www.stanley-pmi.com/" target="blank">
-          <img src={logo5} alt="stanley_logo" style={{ width: "auto", height: "3.5em"}} />
+          <StImage src={logo5} alt="stanley_logo" />
         </a>
       </div>
       <div>
         <a href="https://www.gtbicycles.com/usa_en/" target="blank">
-          <img src={logo4} alt="gtfactory_logo" style={{ width: "auto", height: "1em"}} />
+          <GtImage src={logo4} alt="gtfactory_logo" />
         </a>
       </div>
     </Layout>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+
 
   </SponsorContainer>
 )
@@ -61,8 +66,113 @@ const Layout = styled.div`
 `;
 
 const SponsorContainer = styled.div`
-  padding: 1.25em;
-  margin: 2em;
+  display: block;
+  white-space: pre; 
+`;
+
+const GrImage = styled.img`
+  @media screen and (min-width: 320px) {
+    width: auto;
+    height: 2.5em;
+  }
+  @media screen and (min-width: 360px) {
+    width: auto;
+    height: 3em;
+  }
+  @media screen and (min-width: 579px) {
+    width: auto;
+    height: 5em;
+  }
+`;
+
+const GiImage = styled.img`
+  @media screen and (min-width: 320px) {
+    width: auto;
+    height: 1.25em;
+  }
+  @media screen and (min-width: 360px) {
+    width: auto;
+    height: 1.75em;
+  }
+  @media screen and (min-width: 579px) {
+    width: auto;
+    height: 2.5em;
+  }
+`;
+
+const BhImage = styled.img`
+  @media screen and (min-width: 320px) {
+    width: auto;
+    height: 2.5em;
+  }
+  @media screen and (min-width: 360px) {
+    width: auto;
+    height: 3em;
+  }
+  @media screen and (min-width: 579px) {
+    width: auto;
+    height: 5em;
+  }
+`;
+
+const TcImage = styled.img`
+  @media screen and (min-width: 320px) {
+    width: auto;
+    height: 1em;
+  }
+  @media screen and (min-width: 360px) {
+    width: auto;
+    height: 1em;
+  }
+  @media screen and (min-width: 579px) {
+    width: auto;
+    height: 1.75em;
+  }
+`;
+
+const TrpImage = styled.img`
+  @media screen and (min-width: 320px) {
+    width: auto;
+    height: 1.75em;
+  }
+  @media screen and (min-width: 360px) {
+    width: auto;
+    height: 2em;
+  }
+  @media screen and (min-width: 579px) {
+    width: auto;
+    height: 3em;
+  }
+`;
+
+const StImage = styled.img`
+  @media screen and (min-width: 320px) {
+    width: auto;
+    height: 2.5em;
+  }
+  @media screen and (min-width: 360px) {
+    width: auto;
+    height: 3em;
+  }
+  @media screen and (min-width: 579px) {
+    width: auto;
+    height: 4.5em;
+  }
+`;
+
+const GtImage = styled.img`
+  @media screen and (min-width: 320px) {
+    width: auto;
+    height: 1.25em;
+  }
+  @media screen and (min-width: 360px) {
+    width: auto;
+    height: 1.75em;
+  }
+  @media screen and (min-width: 579px) {
+    width: auto;
+    height: 3.25em;
+  }
 `;
 
 export default Sponsors;

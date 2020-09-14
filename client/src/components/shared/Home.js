@@ -11,25 +11,45 @@ const Home = () => (
     <ImageBoarder>
       <ImageCarousel />
     </ImageBoarder>
-    <Body>
-      <h3>Series Sponsors</h3>
-    </Body>
+    <Text>
+      Series Sponsors
+    </Text>
     <div>
       <Sponsors />
     </div>
   </>
 )
 
-const Header = styled.h1`
+const Header = styled.div`
   text-align: center;
   color: black;
   font-family: marker felt;
+  margin: .5em;
+  @media screen and (min-width: 320px) {
+    font-size: 1.25em;
+  }
+  @media screen and (min-width: 360px) {
+    font-size: 1.5em;
+  }
+  @media screen and (min-width: 579px) {
+    font-size: 3em;
+  }
 `;
 
-const Body = styled.h3`
+const Text = styled.div`
   text-align: center;
   color: black;
   font-family: marker felt;
+  margin: 1em;
+  @media screen and (min-width: 320px) {
+    font-size: .75em;
+  }
+  @media screen and (min-width: 360px) {
+    font-size: 1em;
+  }
+  @media screen and (min-width: 579px) {
+    font-size: 2em;
+  }
 `;
 
 const ImageBoarder = styled.div`

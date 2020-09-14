@@ -19,6 +19,7 @@ const VenueList = ({ venues }) => (
         </Fragment>
       )
     }
+    <br ></br>
   </VenueContainer>
 )
 

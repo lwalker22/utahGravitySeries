@@ -17,12 +17,12 @@ export const VenueHeader = styled.h1`
 
 export const VenueLink = styled(Link)`
   text-decoration: none;
-  margin: .1em;
   color: white;
   font-family: marker felt;
   font-size: 1em;
   display: block;
   text-align: center;
+  margin: 1em;
 `;
 
 export const VenueList = styled.h3`
