@@ -7,19 +7,36 @@ import { SubmitButton, EditButton, DeleteButton, ButtonDiv1, ButtonDiv2 } from '
 
 
 class VenueShow extends Component {
-  state = {editing: false}
+  state = { editing: false, formValues: { name: '', address: '', date: '', }, };
   toggleUpdate = () => this.setState({ editing: !this.state.editing })
 
-  render () {
+  toggleEdit = () => {
+    this.setState( state => {
+      return { editing: !state.editing, };
+    })
+  }
+
+  venueView = () => {
     const { id, name, address, date } = this.props.location.state
-    const { editing } = this.state
-    const { updateVenue, deleteVenue, history } = this.props
     return (
       <FormContainer>
         <FormHeader1>{name}</FormHeader1>
         <FormHeader2>{address}</FormHeader2>
         <FormHeader3>{date}</FormHeader3>
-        { editing ?
+      </FormContainer>
+    )
+  }
+
+
+
+  editView = () => {
+    const { updateVenue, deleteVenue, history } = this.props
+    const { id, name, address, date } = this.props.location.state
+    return (
+      <FormContainer>
+        <FormHeader1>{name}</FormHeader1>
+        <FormHeader2>{address}</FormHeader2>
+        <FormHeader3>{date}</FormHeader3>
             <VenueForm
               id={id}
               name={name}
@@ -29,21 +46,28 @@ class VenueShow extends Component {
               toggleUpdate={this.toggleUpdate}
               history={history}
             />
-          :
-          <ButtonDiv1>
-            <EditButton onClick={this.toggleUpdate}>
-              Edit
-            </EditButton>
-          </ButtonDiv1>
-          }
-          <ButtonDiv2>
             <DeleteButton onClick={() => deleteVenue(id, history)}>
               Delete
             </DeleteButton>
-          </ButtonDiv2>
       </FormContainer>
     )
   }
+
+
+  render () {
+    // const { id, name, address, date } = this.props.location.state
+    const { editing } = this.state
+    return (
+      <FormContainer>
+        { editing ? this.editView() : this.venueView()}
+        <EditButton 
+          onClick={this.toggleEdit}>{editing ? 'Cancel' : 'Edit'}
+        </EditButton>
+      </FormContainer>
+    )
+  }
+
+
 }
 
 const ConnectedVenueShow = (props) => (
@@ -54,8 +78,40 @@ const ConnectedVenueShow = (props) => (
       updateVenue={value.updateVenue}
       deleteVenue={value.deleteVenue}
       />
-    )}
+      )}
   </VenueConsumer>
 )
 
 export default ConnectedVenueShow;
+
+// const { updateVenue, deleteVenue, history } = this.props
+//   return (
+//     <FormContainer>
+//       <FormHeader1>{name}</FormHeader1>
+//       <FormHeader2>{address}</FormHeader2>
+//       <FormHeader3>{date}</FormHeader3>
+//       { editing ?
+//           <VenueForm
+//             id={id}
+//             name={name}
+//             address={address}
+//             date={date}
+//             updateVenue={updateVenue}
+//             toggleUpdate={this.toggleUpdate}
+//             history={history}
+//           />
+//         :
+//         <ButtonDiv1>
+//           <EditButton onClick={this.toggleUpdate}>
+//             Edit
+//           </EditButton>
+//         </ButtonDiv1>
+//         }
+//         <ButtonDiv2>
+//           <DeleteButton onClick={() => deleteVenue(id, history)}>
+//             Delete
+//           </DeleteButton>
+//         </ButtonDiv2>
+//     </FormContainer>
+//   )
+// }

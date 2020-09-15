@@ -15,11 +15,12 @@ const VenueList = ({ venues }) => (
           }}>
             { v.name }
           </VenueLink>
-          <br />
         </Fragment>
       )
     }
-    <br ></br>
+    <br/>
+    <br/>
+    <br/>
   </VenueContainer>
 )
 

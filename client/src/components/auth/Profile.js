@@ -1,10 +1,8 @@
 import React, { Fragment, Component } from 'react';
 import { AuthConsumer } from '../../providers/AuthProvider';
-import { Form, Grid, Image, Container, Divider, Header, Button, } from 'semantic-ui-react';
 import { FormContainer, FormHeader1, FormStyle, FormInput } from '../styledComponents/FormStyles';
 import { SubmitButton, EditButton } from '../styledComponents/CommonStyles';
 import styled from 'styled-components';
-import mtb_logo from '../logos/mtb_logo.jpg';
 
 import Dropzone from 'react-dropzone';
 import { withTheme } from 'styled-components';
@@ -17,8 +15,8 @@ class Profile extends Component {
   state = { editing: false, formValues: { name: '', email: '', file: '', }, };
   
   componentDidMount() {
-    const { auth: { user: { name, email, }, }, } = this.props;
-    this.setState({ formValues: { name, email, }, });
+    const { auth: { user: { name, email, file}, }, } = this.props;
+    this.setState({ formValues: { name, email, file }, });
   }
   
   toggleEdit = () => {
@@ -109,7 +107,9 @@ class Profile extends Component {
           />
           <br></br>
           <br></br>
-          <SubmitButton>Update</SubmitButton>
+          <SubmitButton>
+            Update
+          </SubmitButton>
         </FormStyle>
       </FormContainer>
     )

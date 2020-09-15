@@ -21,9 +21,9 @@ class Navbar extends React.Component {
           Profile
           <br></br>
         </LinkStyle>
-        <Div
+        <button
           onClick={() => handleLogout(this.props.history)} > Logout
-        </Div>
+        </button>
       </>
     );
     } else {
