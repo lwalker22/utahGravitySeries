@@ -53,6 +53,9 @@ class Navbar extends React.Component {
           <LinkStyle to ='/venues' >
             Venues
           </LinkStyle>
+          <LinkStyle to ='/results' >
+            Results
+          </LinkStyle>
         </LeftLayout>
         <RightLayout>
           {this.rightNavItems()}

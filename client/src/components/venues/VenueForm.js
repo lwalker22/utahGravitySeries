@@ -34,7 +34,7 @@ class VenueForm extends Component {
     const { name, address, date } = this.state
     return(
       <FormContainer>
-        <FormHeader1> Venue </FormHeader1>
+        {/* <FormHeader1> Venue </FormHeader1> */}
           <FormStyle onSubmit={this.handleSubmit}>
             <FormInput
               placeholder="Name"

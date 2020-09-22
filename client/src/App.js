@@ -13,6 +13,7 @@ import Register from './components/auth/Register';
 import Profile from './components/auth/Profile';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import Footer from './components/shared/Footer';
+import Results from './components/results/Results'
 
 
 const App = () => (
@@ -23,6 +24,7 @@ const App = () => (
       <Route exact path='/' component={Home} />
       <Route exact path='/about' component={About} />
       <Route exact path='/venues' component={Venues} />
+      <Route exact path='/results' component={Results} />
       <ProtectedRoute exact path='/profile' component={Profile} />
       <Route exact path='/login' component={Login} />
       <Route exact path='/register' component={Register} />

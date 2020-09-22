@@ -10,20 +10,20 @@ export const FormContainer = styled.div`
 export const FormHeader1 = styled.h1`
   color: white;
   text-align: center;
-  font-family: marker felt;
-`;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 450;`;
 
 export const FormHeader2 = styled.h2`
   color: white;
   text-align: center;
-  font-family: marker felt;
-`;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 450;`;
 
 export const FormHeader3 = styled.h3`
   color: white;
   text-align: center;
-  font-family: marker felt;
-`;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 450;`;
 
 export const FormStyle = styled.form`
   padding: 1em;

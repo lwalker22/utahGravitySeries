@@ -3,6 +3,8 @@ import {VenueConsumer} from '../../providers/VenueProvider';
 import VenueForm from './VenueForm'
 import { FormContainer, FormHeader1, FormHeader2, FormHeader3} from '../styledComponents/FormStyles';
 import { SubmitButton, EditButton, DeleteButton, ButtonDiv1, ButtonDiv2 } from '../styledComponents/CommonStyles';
+import check_flag from '../logos/check_flag.jpg';
+
 
 
 
@@ -20,6 +22,12 @@ class VenueShow extends Component {
     const { id, name, address, date } = this.props.location.state
     return (
       <FormContainer>
+        <div>
+          <img src={check_flag} style={{width: '12em', height: 'auto', float: 'left', margin: '2em'}} />
+          <img src={check_flag} style={{width: '12em', height: 'auto', float: 'right', margin: '2em'}} />
+        </div>
+          <div>
+        </div>
         <FormHeader1>{name}</FormHeader1>
         <FormHeader2>{address}</FormHeader2>
         <FormHeader3>{date}</FormHeader3>

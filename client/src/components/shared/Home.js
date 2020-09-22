@@ -23,7 +23,9 @@ const Home = () => (
 const Header = styled.div`
   text-align: center;
   color: black;
-  font-family: marker felt;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 450;
+  font-style: italic;
   margin: .5em;
   @media screen and (min-width: 320px) {
     font-size: 1.25em;
@@ -39,7 +41,7 @@ const Header = styled.div`
 const Text = styled.div`
   text-align: center;
   color: black;
-  font-family: marker felt;
+  font-family: 'Helvetica', sans-serif;
   margin: 1em;
   @media screen and (min-width: 320px) {
     font-size: .75em;
@@ -52,7 +54,7 @@ const Text = styled.div`
   }
 `;
 
-const ImageBoarder = styled.div`
+const ImageBoarder = styled.img`
   background: black;
 
 `;
