@@ -11,15 +11,19 @@ export const VenueContainer = styled.div`
 export const VenueHeader = styled.h1`
   color: white;
   text-align: center;
-  font-family: marker felt;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 3em;
+  font-weight: 450;
+  font-style: italic;
   text-decoration: underline;
 `;
 
 export const VenueLink = styled(Link)`
   text-decoration: none;
   color: white;
-  font-family: marker felt;
-  font-size: 1em;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 450;
+  font-size: 2em;
   display: block;
   text-align: center;
   margin: 1em;
@@ -27,4 +31,5 @@ export const VenueLink = styled(Link)`
 
 export const VenueList = styled.h3`
   text-align: center;
+  
 `;

@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import {VenueConsumer} from '../../providers/VenueProvider';
 import VenueForm from './VenueForm'
 import { FormContainer, FormHeader1, FormHeader2, FormHeader3} from '../styledComponents/FormStyles';
-import { SubmitButton, EditButton, DeleteButton, ButtonDiv1, ButtonDiv2 } from '../styledComponents/CommonStyles';
+import { SubmitButton, EditButton, DeleteButton, ButtonDiv1, ButtonDiv2 } from '../styledComponents/ButtonStyles';
 import check_flag from '../logos/check_flag.jpg';
 
 

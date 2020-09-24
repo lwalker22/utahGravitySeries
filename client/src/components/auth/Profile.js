@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import { AuthConsumer } from '../../providers/AuthProvider';
 import { FormContainer, FormHeader1, FormStyle, FormInput } from '../styledComponents/FormStyles';
-import { SubmitButton, EditButton } from '../styledComponents/CommonStyles';
+import { SubmitButton, EditButton } from '../styledComponents/ButtonStyles';
 import styled from 'styled-components';
 
 import Dropzone from 'react-dropzone';

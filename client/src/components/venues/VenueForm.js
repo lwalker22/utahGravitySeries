@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { FormContainer, FormHeader1, FormStyle, FormInput } from '../styledComponents/FormStyles';
-import { SubmitButton } from '../styledComponents/CommonStyles';
+import { SubmitButton } from '../styledComponents/ButtonStyles';
 
 
 class VenueForm extends Component {

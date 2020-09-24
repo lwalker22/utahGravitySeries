@@ -30,6 +30,16 @@ export const DeleteButton = styled.button`
   font-size: 1em;
 `;
 
+export const AddButton = styled.button`
+  background: black;
+  color: white;
+  padding: .25em;
+  margin: 1em;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-size: 1em;
+`;
+
 export const ButtonDiv1 = styled.div`
   display: inline-block;
 

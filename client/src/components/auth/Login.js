@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { AuthConsumer } from "../../providers/AuthProvider";
 import { Segment } from 'semantic-ui-react';
 import { FormContainer, FormHeader1, FormStyle, FormInput } from '../styledComponents/FormStyles';
-import { SubmitButton } from '../styledComponents/CommonStyles';
+import { SubmitButton } from '../styledComponents/ButtonStyles';
 
 class Login extends Component {
   state = { email: '', password: '' }

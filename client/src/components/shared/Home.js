@@ -54,7 +54,7 @@ const Text = styled.div`
   }
 `;
 
-const ImageBoarder = styled.img`
+const ImageBoarder = styled.div`
   background: black;
 
 `;
