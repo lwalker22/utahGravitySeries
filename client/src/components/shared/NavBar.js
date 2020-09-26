@@ -29,12 +29,12 @@ class Navbar extends React.Component {
     } else {
       return (
         <>
-          <LinkStyle to="/login" >
+          <LinkStyle2 to="/login" >
             Login
-          </LinkStyle>
-          <LinkStyle to="/register" >
+          </LinkStyle2>
+          <LinkStyle2 to="/register" >
             Register
-          </LinkStyle>
+          </LinkStyle2>
         </>
       );
     }
@@ -77,11 +77,14 @@ export class ConnectedNavbar extends React.Component {
 
 export default withRouter(ConnectedNavbar);
 
-const NavContainer = styled.body`
-  background: black;
-  boader: 2px solid black;
+const NavContainer = styled.div`
+  background-image: linear-gradient(to right, black, black, grey, white);
   overflow: hidden;
-  padding: 1em;
+  border-bottom-width: 1px;
+  border-top-width: 0px;
+  border-left-width; 0px;
+  border-style: solid;
+  border-color: grey;
 `;
 
 const LeftLayout = styled.div`
@@ -100,9 +103,25 @@ const RightLayout = styled.div`
 
 const LinkStyle = styled(Link)`
   text-decoration: none;
-  padding: .5em;
+  padding: .75em;
   color: white;
-  font-family: marker felt;
+  font-family: 'Zilla Slab', serif;
+  @media screen and (min-width: 320px) {
+    font-size: .8em;
+  }
+  @media screen and (min-width: 360px) {
+    font-size: 1em;
+  }
+  @media screen and (min-width: 579px) {
+    font-size: 1.25em;
+  }
+`;
+
+const LinkStyle2 = styled(Link)`
+  text-decoration: none;
+  padding: .75em;
+  color: black;
+  font-family: 'Zilla Slab', serif;
   @media screen and (min-width: 320px) {
     font-size: .8em;
   }
@@ -118,11 +137,11 @@ const Div = styled.div`
   text-decoration: none;
   margin: 1em;
   color: white;
-  font-family: marker felt;
-`;
+  font-family: 'Zilla Slab', serif;
+  `;
 
 const LogoImage = styled.img`
-  margin: .25em;
+  padding: .75em;
   @media screen and (min-width: 320px) {
     width: auto;
     height: 2em;
@@ -150,3 +169,19 @@ const LogoImage = styled.img`
 //       </div>
 //     </>
 //   );
+
+// const NavContainer = styled.div`
+//   background-image: linear-gradient(to right, black, white);
+//   overflow: hidden;
+//   max-width: 250px;
+//   padding: 1rem;
+//   color: white;
+//   border-width: 3px;
+//   border-style: solid;
+//   border-image: 
+//     linear-gradient(
+//       to bottom, 
+//       red, 
+//       rgba(0, 0, 0, 0)
+//     ) 1 100%;
+// `;

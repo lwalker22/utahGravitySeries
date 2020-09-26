@@ -22,12 +22,12 @@ class Venues extends Component {
     const { adding } = this.state
     return(
       <>
-      <FormContainer>
+      {/* <FormContainer> */}
         { adding ? <AllVenues /> : <AddVenue /> }
       <AddButton
         onClick={this.toggleAdd}> { adding ? 'Add Venue' : 'Back to Venues' }
       </AddButton>
-      </FormContainer>
+      {/* </FormContainer> */}
       </>
     );
   }

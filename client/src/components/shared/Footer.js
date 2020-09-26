@@ -26,10 +26,11 @@ export default Footer;
 const FootContainer = styled.div`
   background-color: black;
   overflow: hidden;
-  position: fixed;
-  left: 0;
+  position: relative;
   bottom: 0;
-  right: 0;
+  width: 100%;
+  height: 2.5rem; 
+  padding: .5em;
 `;
 
 const LeftImage = styled.img`
@@ -55,3 +56,12 @@ const RightSecondImage = styled.img`
   margin: 0em;
   float: right;
 `;
+
+// const FootContainer = styled.div`
+//   background-color: black;
+//   overflow: hidden;
+//   position: fixed;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+// `;

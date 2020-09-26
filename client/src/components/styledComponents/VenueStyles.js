@@ -3,7 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 
 
 export const VenueContainer = styled.div`
-  background: black;
+  background: #4a4b52;
   padding: 0;
   border: 5px solid white;
 `;
@@ -11,7 +11,7 @@ export const VenueContainer = styled.div`
 export const VenueHeader = styled.h1`
   color: white;
   text-align: center;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Zilla Slab', serif;
   font-size: 3em;
   font-weight: 450;
   font-style: italic;
@@ -21,7 +21,7 @@ export const VenueHeader = styled.h1`
 export const VenueLink = styled(Link)`
   text-decoration: none;
   color: white;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Zilla Slab', serif;
   font-weight: 450;
   font-size: 2em;
   display: block;

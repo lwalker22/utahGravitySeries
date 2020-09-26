@@ -1,16 +1,21 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import {VenueConsumer} from '../../providers/VenueProvider';
 import VenueForm from './VenueForm'
 import { FormContainer, FormHeader1, FormHeader2, FormHeader3} from '../styledComponents/FormStyles';
-import { SubmitButton, EditButton, DeleteButton, ButtonDiv1, ButtonDiv2 } from '../styledComponents/ButtonStyles';
+import { EditButton, DeleteButton } from '../styledComponents/ButtonStyles';
 import check_flag from '../logos/check_flag.jpg';
-
-
+import Dropzone from 'react-dropzone';
+import styled from 'styled-components';
 
 
 class VenueShow extends Component {
-  state = { editing: false, formValues: { name: '', address: '', date: '', }, };
+  state = { editing: false, formValues: { name: '', address: '', date: '', file: '', }, };
   toggleUpdate = () => this.setState({ editing: !this.state.editing })
+
+  componentDidMount() {
+    const { name, address, date, file} = this.props;
+    this.setState({ formValues: { name, address, date, file }, });
+  }
 
   toggleEdit = () => {
     this.setState( state => {
@@ -21,21 +26,22 @@ class VenueShow extends Component {
   venueView = () => {
     const { id, name, address, date } = this.props.location.state
     return (
-      <FormContainer>
+      <div>
         <div>
-          <img src={check_flag} style={{width: '12em', height: 'auto', float: 'left', margin: '2em'}} />
           <img src={check_flag} style={{width: '12em', height: 'auto', float: 'right', margin: '2em'}} />
         </div>
-          <div>
-        </div>
-        <FormHeader1>{name}</FormHeader1>
-        <FormHeader2>{address}</FormHeader2>
-        <FormHeader3>{date}</FormHeader3>
-      </FormContainer>
+        <VenueDisplay>
+          <FormHeader1>{name}</FormHeader1>
+          <FormHeader2>{address}</FormHeader2>
+          <FormHeader3>{date}</FormHeader3>
+        </VenueDisplay>
+      </div>
     )
   }
 
-
+  onDrop = (files) => {
+    this.setState({ formValues: { ...this.state.formValues, file: files[0], } });
+  }
 
   editView = () => {
     const { updateVenue, deleteVenue, history } = this.props
@@ -45,6 +51,26 @@ class VenueShow extends Component {
         <FormHeader1>{name}</FormHeader1>
         <FormHeader2>{address}</FormHeader2>
         <FormHeader3>{date}</FormHeader3>
+            <Dropzone
+              onDrop={this.onDrop}
+              multiple={false}
+            >
+              {({ getRootProps, getInputProps, isDragActive }) => {
+                return (
+                  <div
+                    {...getRootProps()}
+                    style={styles.dropzone}
+                  >
+                    <input {...getInputProps()} />
+                    {
+                      isDragActive ?
+                        <p>Drop files here...</p> :
+                        <p>Drop picture here or select file to upload.</p>
+                    }
+                  </div>
+                )
+              }}
+            </Dropzone>
             <VenueForm
               id={id}
               name={name}
@@ -90,7 +116,32 @@ const ConnectedVenueShow = (props) => (
   </VenueConsumer>
 )
 
+const defaultImage = require('../logos/mtb_logo.jpg');
+
+const styles = {
+  dropzone: {
+    height: "180px",
+    width: "150px",
+    border: "1px dashed white",
+    borderRadius: "5px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: "10px",
+    color: "white",
+    display: "block",
+    margin: "0 auto",
+    marginTop: "1em"
+  },
+}
+
 export default ConnectedVenueShow;
+
+const VenueDisplay = styled.div`
+color: black;
+text-align: left;
+
+`;
 
 // const { updateVenue, deleteVenue, history } = this.props
 //   return (
