@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 
 export const FormContainer = styled.div`
-  background-image: linear-gradient(to right, white, black, black);
+  background-image: linear-gradient(to right, white, grey, grey, black, black, black);
   border: 8px solid white;
   text-align: center;
 

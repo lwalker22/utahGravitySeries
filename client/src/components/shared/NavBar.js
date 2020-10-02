@@ -17,10 +17,10 @@ class Navbar extends React.Component {
   if (user) {
     return (
       <>
-        <LinkStyle to="/profile" >
+        <LinkStyle2 to="/profile" >
           Profile
           <br></br>
-        </LinkStyle>
+        </LinkStyle2>
         <button
           onClick={() => handleLogout(this.props.history)} > Logout
         </button>
@@ -84,7 +84,7 @@ const NavContainer = styled.div`
   border-top-width: 0px;
   border-left-width; 0px;
   border-style: solid;
-  border-color: grey;
+  border-color: white;
 `;
 
 const LeftLayout = styled.div`
@@ -105,7 +105,7 @@ const LinkStyle = styled(Link)`
   text-decoration: none;
   padding: .75em;
   color: white;
-  font-family: 'Zilla Slab', serif;
+  font-family: 'Inter', serif;
   @media screen and (min-width: 320px) {
     font-size: .8em;
   }
@@ -117,11 +117,12 @@ const LinkStyle = styled(Link)`
   }
 `;
 
+
 const LinkStyle2 = styled(Link)`
   text-decoration: none;
   padding: .75em;
   color: black;
-  font-family: 'Zilla Slab', serif;
+  font-family: 'Inter', serif;
   @media screen and (min-width: 320px) {
     font-size: .8em;
   }
@@ -137,7 +138,7 @@ const Div = styled.div`
   text-decoration: none;
   margin: 1em;
   color: white;
-  font-family: 'Zilla Slab', serif;
+  font-family: 'Inter', serif;
   `;
 
 const LogoImage = styled.img`

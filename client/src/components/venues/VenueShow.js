@@ -28,13 +28,14 @@ class VenueShow extends Component {
     return (
       <div>
         <div>
-          <img src={check_flag} style={{width: '12em', height: 'auto', float: 'right', margin: '2em'}} />
+          <Image src={check_flag} />
         </div>
-        <VenueDisplay>
-          <FormHeader1>{name}</FormHeader1>
-          <FormHeader2>{address}</FormHeader2>
-          <FormHeader3>{date}</FormHeader3>
-        </VenueDisplay>
+        <Display>
+          <DisplayH1>{name}</DisplayH1>
+          <br></br>
+          <DisplayH2>Location:  {address}</DisplayH2>
+          <DisplayH3>Date:  {date}</DisplayH3>
+        </Display>
       </div>
     )
   }
@@ -71,6 +72,7 @@ class VenueShow extends Component {
                 )
               }}
             </Dropzone>
+            <br></br>
             <VenueForm
               id={id}
               name={name}
@@ -137,10 +139,73 @@ const styles = {
 
 export default ConnectedVenueShow;
 
-const VenueDisplay = styled.div`
-color: black;
-text-align: left;
+const Display = styled.div`
+  color: black;
+  text-align: left;
+  margin: 1em;
+  font-family: 'Inter', serif;
+`;
 
+const Display1= styled.div`
+  margin: 1em;
+`;
+
+const DisplayH1 = styled.div`
+  
+  @media screen and (min-width: 320px) {
+    font-size: 1em;
+  }
+  @media screen and (min-width: 360px) {
+    font-size: 1em;
+  }
+  @media screen and (min-width: 579px) {
+    font-size: 3em;
+  }
+
+`;
+
+const DisplayH2 = styled.div`
+  margin: 1em;
+  @media screen and (min-width: 320px) {
+    font-size: 1em;
+  }
+  @media screen and (min-width: 360px) {
+    font-size: .75em;
+  }
+  @media screen and (min-width: 579px) {
+    font-size: 1.5em;
+  }
+
+`;
+
+const DisplayH3 = styled.div`
+  margin: 1em;
+  @media screen and (min-width: 320px) {
+    font-size: 1em;
+  }
+  @media screen and (min-width: 360px) {
+    font-size: .75em;
+  }
+  @media screen and (min-width: 579px) {
+    font-size: 1.5em;
+  }
+`;
+
+const Image = styled.img`
+  float: right;
+  margin: 2em;
+  @media screen and (min-width: 320px) {
+    width: auto;
+    height: 4em;
+  }
+  @media screen and (min-width: 360px) {
+    width: auto;
+    height: 4em;
+  }
+  @media screen and (min-width: 579px) {
+    width: auto;
+    height: 8em;
+  }
 `;
 
 // const { updateVenue, deleteVenue, history } = this.props

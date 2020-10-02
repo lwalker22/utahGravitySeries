@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const About = () => (
   <Container>
-    <P1Style> This series takes place in the Intermountain West with venues spanning from Southern Utah to Eastern Idaho. Offering racing categories from beginner to professional in both
+    <P1Style> This series takes place in the Intermountain West with venues spanning from Southern Utah to Southern Idaho. Offering racing categories from beginner to professional in both
       <AStyle href="https://en.wikipedia.org/wiki/Downhill_mountain_biking" target="blank">
         &nbsp;Downhill&nbsp;
       </AStyle> 

@@ -18,9 +18,7 @@ const VenueList = ({ venues }) => (
         </Fragment>
       )
     }
-    <br/>
-    <br/>
-    <br/>
+    <br></br>
   </VenueContainer>
 )
 

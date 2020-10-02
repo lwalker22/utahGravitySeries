@@ -156,11 +156,21 @@ const styles = {
 }
 
 const ImageContainer = styled.img`
-  margin: 2em;
-  height: 6em;
-  width: auto;
+  margin: 1em;
   padding-left: 2em;
   padding-right: 2em;
+  @media screen and (min-width: 320px) {
+    width: auto;
+    height: 2.5em;
+  }
+  @media screen and (min-width: 360px) {
+    width: auto;
+    height: 3em;
+  }
+  @media screen and (min-width: 579px) {
+    width: auto;
+    height: 5em;
+  }
 `;
 
 // const Profile = () => (

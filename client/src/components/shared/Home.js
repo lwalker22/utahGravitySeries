@@ -7,7 +7,9 @@ const Home = () => (
   <>
     {/* <HeaderContainer> */}
       <Header>
-        Utah Gravity Series
+      <span style = {{fontWeight: "900"}}> UTAH</span> 
+      <span style = {{fontWeight: "500"}}> GRAVITY</span> 
+      <span style = {{fontWeight: "100"}}> SERIES</span>
       </Header>
     {/* </HeaderContainer> */}
     <ImageBoarder>
@@ -16,6 +18,7 @@ const Home = () => (
     <Text>
       Series Sponsors
     </Text>
+    <br></br>
     <div>
       <Sponsors />
     </div>
@@ -23,11 +26,10 @@ const Home = () => (
 )
 
 const Header = styled.div`
-  color: grey;
+  color: #E7E7E7;
   text-align: center;
   background-image: linear-gradient(to right, black, black, grey, white );
-  font-family: 'Zilla Slab', serif;
-  font-weight: 450;
+  font-family: 'Inter', serif;
   font-style: italic;
   @media screen and (min-width: 320px) {
     font-size: 1.25em;
@@ -50,8 +52,8 @@ const Header = styled.div`
 const Text = styled.div`
   text-align: center;
   color: black;
-  font-family: 'Zilla Slab', serif;
-  margin: 1em;
+  font-family: 'Inter', serif;
+  padding: 1em;
   @media screen and (min-width: 320px) {
     font-size: .75em;
   }
@@ -65,7 +67,8 @@ const Text = styled.div`
 
 const ImageBoarder = styled.div`
   background: black;
-  padding: 1em;
+  border-top: solid white;
+  border-bottom: solid 1em black;
 
 `;
 

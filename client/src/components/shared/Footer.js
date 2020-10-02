@@ -7,54 +7,61 @@ import { Link, withRouter } from "react-router-dom";
 
 
 const Footer = () => (
-    <FootContainer>
+    <FootContainer1>
       <a href="mailto:info@utahdh.org" target="blank">
         <LeftImage src={email_logo} alt="email_logo"/>
       </a>
+      <RightImages>
       <a href="https://www.facebook.com/utahgravityseries/" target="blank">
         <RightFirstImage src={fb_logo} alt="fb_logo" />
       </a>
       <a href="https://www.instagram.com/utahgravityseries/" target="blank">
         <RightSecondImage src={insta_logo} alt="insta_logo" />
       </a>
-    </FootContainer>
+      </RightImages>
+    </FootContainer1>
 )
 
 export default Footer;
 
 
-const FootContainer = styled.div`
+const FootContainer1 = styled.div`
   background-color: black;
   overflow: hidden;
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 2.5rem; 
-  padding: .5em;
+`;
+const RightImages = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `;
 
 const LeftImage = styled.img`
   width: auto;
   height: 1em;
-  padding: 1em;
+  padding: 1.5em;
   float: left;
   margin: 0em;
 `;
 
 const RightFirstImage = styled.img`
   width: auto;
-  height: 1.1em;
-  padding: 0em;
-  margin: 1em;
-  float: right;
+  height: 1.2em;
+  padding: 1em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 `;
 
 const RightSecondImage = styled.img`
   width: auto;
   height: 1.75em;
-  padding: .75em;
-  margin: 0em;
-  float: right;
+  padding: 1em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 `;
 
 // const FootContainer = styled.div`

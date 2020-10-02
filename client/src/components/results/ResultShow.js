@@ -5,7 +5,7 @@ import { ResultConsumer } from '../../providers/ResultProvider';
 
 
 class ResultShow extends Component {
-  state = { editing: false }
+  state = { editing: true }
 
   toggelEdit = () => this.setState({ editing: !this.state.editing })
   

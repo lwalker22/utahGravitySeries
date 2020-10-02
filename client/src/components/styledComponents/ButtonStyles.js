@@ -8,6 +8,9 @@ export const SubmitButton = styled.button`
   border: 1px solid white;
   border-radius: 10px;
   font-size: 1em;
+  :hover {
+    background-color: #004200;
+  }
 `;
 
 export const EditButton = styled.button`
@@ -18,6 +21,7 @@ export const EditButton = styled.button`
   border: 1px solid white;
   border-radius: 10px;
   font-size: 1em;
+  
 `;
 
 export const DeleteButton = styled.button`
@@ -28,6 +32,9 @@ export const DeleteButton = styled.button`
   border: 1px solid white;
   border-radius: 10px;
   font-size: 1em;
+  :hover {
+    background-color: #420000;
+  }
 `;
 
 export const AddButton = styled.button`
